@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #007bff;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <!-- Name -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <!-- Gender (Radio buttons) -->
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male"> Male
+      <input type="radio" id="female" name="gender" value="female"> Female
+
+      <!-- Interests (Checkboxes) -->
+      <label>Interests:</label>
+      <input type="checkbox" name="interest" value="coding"> Coding
+      <input type="checkbox" name="interest" value="design"> Design
+      <input type="checkbox" name="interest" value="music"> Music
+
+      <!-- Dropdown -->
+      <label for="subject">Subject:</label>
+      <select id="subject" name="subject" required>
+        <option value="">-- Select a subject --</option>
+        <option value="support">Support</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select>
+
+      <!-- Message -->
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" placeholder="Write your message..." required></textarea>
+
+      <!-- Submit button -->
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+</body>
+</html>
